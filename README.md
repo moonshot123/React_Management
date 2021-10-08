@@ -1,3 +1,6 @@
+# 리액트 학습용 테스트 코드입니다.
+리액트를 사용한 간단한 관리 프로그램
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
