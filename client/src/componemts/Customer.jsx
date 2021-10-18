@@ -1,24 +1,23 @@
-import styled from "styled-components";
-
+import { Grid, Image, Segment } from "semantic-ui-react";
 const Customer = ({ user }) => {
   const UserList = ({ item }) => (
-    <div>
-      <img className="userimg" src={item.img} alt={item.name} />
+    <Segment>
+      <Image src={item.img} />
       <h2>{item.name}</h2>
       <p>{item.id}</p>
       <p>{item.birthday}</p>
       <p>{item.gender}</p>
-    </div>
+    </Segment>
   );
   return (
-    <div>
+    <Grid stackable columns={3}>
       {user.map((e, i) => (
-        <UserList item={e} key={i} />
+        <Grid.Column>
+          <UserList item={e} key={i} />
+        </Grid.Column>
       ))}
-    </div>
+    </Grid>
   );
 };
-
-const UserList = styled.div``;
 
 export default Customer;

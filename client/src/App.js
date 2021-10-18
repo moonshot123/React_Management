@@ -18,6 +18,10 @@ function App() {
       .then(function (myJson) {
         console.log(JSON.stringify(myJson));
         setUser(myJson);
+      })
+      .catch((err) => {
+        // Do something for an error here
+        console.log("Error Reading data " + err);
       });
   };
 
