@@ -2,6 +2,7 @@ import Customer from "./componemts/Customer";
 import "./App.css";
 import { useEffect, useState } from "react";
 
+import Headers from "./componemts/Header";
 function App() {
   const [user, setUser] = useState([]);
 
@@ -26,9 +27,13 @@ function App() {
   };
 
   return (
-    <div>
-      <Customer user={user} />
-    </div>
+    <>
+      <div>
+        <Headers />
+        <hr />
+        <Customer user={user} />
+      </div>
+    </>
   );
 }
 
